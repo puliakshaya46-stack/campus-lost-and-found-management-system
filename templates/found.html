@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Report Found Item</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Campus Lost & Found
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="{{ url_for('home') }}">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('lost') }}">
+                        Report Lost
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('found') }}">
+                        Report Found
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('browse') }}">
+                        Browse Items
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('admin') }}">
+                        Staff Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <h1>
+        Report Found Item
+    </h1>
+
+    <p style="text-align: center;">
+        Enter the details of the item you found.
+    </p>
+
+
+    <form>
+
+        <label>
+            Student Name
+        </label>
+
+        <input
+            type="text"
+            name="studentName"
+            placeholder="Enter your name"
+            required
+        >
+
+
+        <label>
+            Item Name
+        </label>
+
+        <input
+            type="text"
+            name="itemName"
+            placeholder="Example: Blue Water Bottle"
+            required
+        >
+
+
+        <label>
+            Category
+        </label>
+
+        <select name="category" required>
+
+            <option value="">
+                Select Category
+            </option>
+
+            <option value="electronics">
+                Electronics
+            </option>
+
+            <option value="documents">
+                Documents
+            </option>
+
+            <option value="clothing">
+                Clothing
+            </option>
+
+            <option value="books">
+                Books
+            </option>
+
+            <option value="other">
+                Other
+            </option>
+
+        </select>
+
+
+        <label>
+            Date Found
+        </label>
+
+        <input
+            type="date"
+            name="dateFound"
+            required
+        >
+
+
+        <label>
+            Location Found
+        </label>
+
+        <input
+            type="text"
+            name="locationFound"
+            placeholder="Example: College Canteen"
+            required
+        >
+
+
+        <label>
+            Description
+        </label>
+
+        <textarea
+            name="description"
+            rows="5"
+            placeholder="Describe the found item..."
+            required
+        ></textarea>
+
+
+        <label>
+            Contact Number
+        </label>
+
+        <input
+            type="tel"
+            name="contact"
+            placeholder="Enter your contact number"
+            required
+        >
+
+
+        <button
+            type="button"
+            onclick="saveItem('found')"
+        >
+            Submit Report
+        </button>
+
+    </form>
+
+
+    <a href="{{ url_for('home') }}" class="back-link">
+        ← Back to Home
+    </a>
+
+
+    <footer>
+
+        <p>
+            Campus Lost & Found
+        </p>
+
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='js/form.js') }}"></script>
+
+</body>
+
+</html>

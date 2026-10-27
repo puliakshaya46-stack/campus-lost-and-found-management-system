@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Campus Lost & Found Management System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                Campus Lost & Found
+            </div>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="{{ url_for('home') }}">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('lost') }}">
+                        Report Lost
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('found') }}">
+                        Report Found
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('browse') }}">
+                        Browse Items
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{{ url_for('admin') }}">
+                        Staff Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <h1>
+            Campus Lost & Found Management System
+        </h1>
+
+        <p>
+            Find what you lost. Return what you found.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('lost') }}" class="btn">
+                Report Lost Item
+            </a>
+
+            <a href="{{ url_for('found') }}" class="btn">
+                Report Found Item
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- How It Works -->
+
+    <section class="about">
+
+        <h2>
+            How It Works
+        </h2>
+
+        <div class="features">
+
+            <div class="feature-card">
+
+                <h3>
+                    Report
+                </h3>
+
+                <p>
+                    Report an item that you have lost
+                    or found on campus.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <h3>
+                    Search
+                </h3>
+
+                <p>
+                    Search approved lost and found
+                    items reported on campus.
+                </p>
+
+            </div>
+
+
+            <div class="feature-card">
+
+                <h3>
+                    Recover
+                </h3>
+
+                <p>
+                    Visit the Lost & Found Help Desk
+                    to safely claim your item.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Help Desk -->
+
+    <section class="contact-section">
+
+        <h2>
+            Lost & Found Help Desk
+        </h2>
+
+        <p>
+            Need help finding or claiming an item?
+            Visit the Lost & Found Help Desk.
+        </p>
+
+        <div class="contact-card">
+
+            <p>
+                <strong>📍 Location:</strong><br>
+                ISTS Library,<br>
+                ECE Block, Ground Floor
+            </p>
+
+            <p>
+                <strong>🕐 Working Hours:</strong><br>
+                Monday – Saturday<br>
+                9:00 AM – 4:30 PM
+            </p>
+
+            <p>
+                <strong>👤 Staff:</strong><br>
+                Lost & Found Coordinator
+            </p>
+
+            <p>
+                <strong>🚪 Room:</strong><br>
+                Library
+            </p>
+
+            <p>
+                <strong>📌 Claiming an Item:</strong><br>
+                Bring your college ID card
+                to the Help Desk.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            Campus Lost & Found
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
